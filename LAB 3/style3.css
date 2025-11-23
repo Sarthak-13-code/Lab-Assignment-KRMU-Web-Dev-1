@@ -1,0 +1,319 @@
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #E67E22;
+    --secondary-color-light: #F39C12;
+    --background-color: #F4F6F7;
+    --text-color: #2D3436;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background: var(--background-color);
+    line-height: 1.6;
+}
+
+/* Header (Flexbox) */
+header {
+    background-color: #555D50;
+    color: aliceblue;
+    padding: 2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: color 0.5s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero Section (Flexbox & Animation) */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero-text h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text h2.developer {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    animation: colorChange 3s infinite;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.6rem;
+}
+
+@keyframes colorChange {
+    0% {
+        color: darkgreen;
+    }
+
+    100% {
+        color: cornflowerblue;
+    }
+}
+
+.hero-img {
+    margin-top: 3rem;
+}
+
+.hero-img img {
+    width: 18rem;
+    height: 15rem;
+    border-radius: ;
+    object-fit: cover;
+    border: 3px solid black;
+}
+
+/* About Section */
+.about {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.about p {
+    font-size: 1.6rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Skills Section (CSS Grid) */
+.skills {
+    padding: 3.5rem 2rem;
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background: #36454F;
+    color: azure;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    background: #1B2B38;
+}
+
+.skill-card h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+    font-size: 1.6rem;
+}
+
+/* Projects Section (CSS Grid) */
+.projects {
+    padding: 3rem 2rem;
+}
+
+.projects h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: #FFF;
+    border: 1px solid #ccc;
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.project-card p {
+    font-size: 1.6rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 3rem 2rem;
+}
+
+.contact h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input,
+.contact textarea {
+    font-size: 1.6rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.contact button {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: honeydew;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact button:hover {
+    background: var(--secondary-color-light);
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: aliceblue;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row;
+        text-align: left;
+        padding: 6rem 5%;
+    }
+
+    .hero-text {
+        flex: 1;
+    }
+
+    .hero-img {
+        flex: 1;
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-img img {
+        width: 12rem;
+        height: 12rem;
+    }
+}
